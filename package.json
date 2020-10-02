@@ -10,8 +10,11 @@
   "dependencies": {
     "axios": "^0.20.0",
     "core-js": "^3.6.5",
+    "get-youtube-id": "^1.0.1",
+    "movie-trailer": "^2.0.6",
     "vue": "^2.6.11",
     "vue-router": "^3.2.0",
+    "vue-youtube": "^1.4.0",
     "vuetify": "^2.2.11",
     "vuex": "^3.4.0"
   },

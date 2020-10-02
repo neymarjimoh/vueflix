@@ -25,6 +25,7 @@
           >
             <v-img
               :src="base_url + movie.poster_path"
+              @click="handleClick(movie)"
               aspect-ratio="1"
               class=""
               gradient="to bottom, rgba(0,0,0,.1), rgba(0,0,0,.5)"
@@ -43,11 +44,21 @@
         </v-hover>
       </v-slide-item>
     </v-slide-group>
+    <youtube
+      width="100%"
+      height="230"
+      v-if="videoId"
+      :video-id="videoId"
+      :player-vars="playerVars"
+      @playing="playing"
+    ></youtube>
   </div>
 </template>
 
 <script>
 import axios from "../plugins/axios";
+import movieTrailer from "movie-trailer";
+import getYouTubeID from "get-youtube-id";
 
 export default {
   props: {
@@ -62,6 +73,10 @@ export default {
     movies: [],
     showLoading: true,
     base_url: "https://image.tmdb.org/t/p/original/",
+    videoId: "",
+    playerVars: {
+      autoplay: 1,
+    },
   }),
   async mounted() {
     this.showLoading = true;
@@ -74,7 +89,24 @@ export default {
       this.showLoading = false;
     }
   },
-  methods: {},
+  methods: {
+    handleClick(movie) {
+      console.log("movie title", movie?.title);
+      if (this.videoId) {
+        this.videoId = "";
+      } else {
+        movieTrailer(movie?.title || "")
+          .then((res) => {
+            this.videoId = getYouTubeID(res);
+            console.log("video id", this.videoId);
+          })
+          .catch((err) => console.error(err));
+      }
+    },
+    playing() {
+      console.log("we are watching!!!");
+    },
+  },
 };
 </script>
 
