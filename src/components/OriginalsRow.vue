@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="white--text">
     <h2 class="font-weight-medium mb-3 mt-4 pa-5">NETFLIX ORIGINALS</h2>
     <v-slide-group
       v-model="model"
@@ -7,6 +7,7 @@
       prev-icon="mdi-minus"
       next-icon="mdi-plus"
       show-arrows
+      dark
       width="100%"
     >
       <v-slide-item

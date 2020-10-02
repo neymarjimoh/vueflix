@@ -1,6 +1,6 @@
 <template>
   <div>
-    <v-app-bar color="" dark elevate-on-scroll>
+    <v-app-bar color="#111" dark elevate-on-scroll fixed>
       <div class="d-flex align-center">
         <v-img
           alt="Vuetify Logo"

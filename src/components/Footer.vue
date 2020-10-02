@@ -1,6 +1,6 @@
 <template>
-  <v-card height="150">
-    <v-footer absolute class="font-weight-normal">
+  <v-card height="70" class="mt-0">
+    <v-footer dark absolute class="font-weight-normal">
       <v-col class="text-center" cols="12">
         &copy; {{ new Date().getFullYear() }} — Made with
         <v-btn class="ml-1" text icon color="pink">
@@ -21,6 +21,6 @@ a:-webkit-any-link {
   text-decoration: none;
 }
 .footer__username {
-    font-family: gil;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 </style>

@@ -1,10 +1,11 @@
 <template>
-  <div>
+  <div class="white--text">
     <h2 class="mt-6 font-weight-medium mb-4 pa-2 ml-5">{{ title }}</h2>
     <v-slide-group
       v-model="model"
       active-class="success"
       show-arrows
+      dark
       width="100%"
     >
       <v-slide-item

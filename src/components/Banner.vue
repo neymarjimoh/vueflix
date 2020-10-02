@@ -11,24 +11,6 @@
       </div>
       <div class="banner__fadeBottom" />
     </header>
-    <header class="banner card rounded-0" :style="headerStyle">
-      <v-img
-        :src="`https://image.tmdb.org/t/p/original/${image}`"
-        class="white--text align-end"
-        gradient="to bottom, rgba(0,0,0,.1), rgba(0,0,0,.5)"
-        height="200px"
-      >
-        <div class="banner__contents">
-          <h1 class="banner__title card-title">{{ bannerTitle }}</h1>
-          <div class="banner__buttons">
-            <button class="banner__button rounded-0">Play</button>
-            <button class="banner__button rounded-0">My List</button>
-          </div>
-          <p class="banner__description card-text">{{ truncateOverview }}</p>
-        </div>
-      </v-img>
-      <div class="banner__fadeBottom card-actions" />
-    </header>
   </div>
 </template>
 
@@ -105,7 +87,8 @@ export default {
 
 .banner__description {
   width: 45rem;
-  line-height: 1.3;
+  margin-top: 1rem;
+  line-height: 1.5;
   padding-top: 1rem;
   font-size: 0.9rem;
   max-width: 360px;

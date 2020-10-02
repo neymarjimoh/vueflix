@@ -1,5 +1,5 @@
 <template>
-  <v-container fluid>
+  <v-container fluid class="home__container">
     <Banner />
     <OriginalsRow />
     <Row title="Trending Videos" :fetchUrl="requests.fetchTrending" />
@@ -23,8 +23,8 @@ export default {
   name: "Home",
   data() {
     return {
-      requests
-    }
+      requests,
+    };
   },
   components: {
     Row,
@@ -34,4 +34,8 @@ export default {
 };
 </script>
 
-<style scoped></style>
+<style scoped>
+.home__container {
+  background-color: #111;
+}
+</style>
