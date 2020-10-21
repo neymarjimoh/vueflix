@@ -1,7 +1,7 @@
 # vueflix
 A One page Netflix simple clone built with Vuejs and Vuetify.
 
-You can demo [here](http://vueflix.vercel.app/) and preview a trailer by clicking on a video then wait a little for it to displayed.
+You can demo [here](http://vueflix.vercel.app/) and preview a trailer by clicking on a video then wait a little for it to be displayed.
 
 ## Getting started
 
